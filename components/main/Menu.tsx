@@ -1,52 +1,54 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
-import { useActionSheet } from '@expo/react-native-action-sheet';
-import IconButton from './IconButton';
+import { StyleSheet, TouchableOpacity } from "react-native";
+import React from "react";
+import { useActionSheet } from "@expo/react-native-action-sheet";
+import IconButton from "./IconButton";
+import { Redirect, useRouter } from "expo-router";
 
 export default function MenuComponent() {
-
   const { showActionSheetWithOptions } = useActionSheet();
+  const router = useRouter();
 
-const onPress = () => {
-    const options = ['Delete', 'Save', 'Cancel'];
-    const destructiveButtonIndex = 0;
-    const cancelButtonIndex = 2;
 
-  showActionSheetWithOptions(
-    {
-      options,
-      cancelButtonIndex,
-      destructiveButtonIndex
-    },
-    (selectedIndex?: number) => {
-       switch (selectedIndex) {
-         case 1:
-         // Save
-         console.log("save")
-         break;
-  
-         case destructiveButtonIndex:
-         // Delete
-         console.log("Delete")
-         break;
-  
-         case cancelButtonIndex:
-         console.log("Canceled")
-         // Canceled
-         break;
+  const options = ["About", "Logout", "Cancel"];
+  const destructiveButtonIndex = 1;
+  const cancelButtonIndex = 2;
+
+  const handlePress = () => {
+    showActionSheetWithOptions(
+      {
+        options,
+        cancelButtonIndex,
+        destructiveButtonIndex,
+      },
+      (pressedId) => {
+        switch (pressedId) {
+          
+          case 0:
+            router.push("/about")
+            console.log("About");
+            break;
+
+          case destructiveButtonIndex:
+             router.replace("/login")
+            console.log("Logout");
+            break;
+
+          case cancelButtonIndex:
+            console.log("Canceled");
+            // Canceled
+            break;
         }
-    }
-  )
-}
+      }
+    );
+  };
 
   return (
-     <IconButton
-        // style={styles.buttom}
-        iconName="bars"
-        onPress={() => onPress()}
+    <IconButton
+      // style={styles.buttom}
+      iconName="bars"
+      onPress={handlePress}
     />
-  )
+  );
 }
 
-const styles = StyleSheet.create({})
-
+const styles = StyleSheet.create({});

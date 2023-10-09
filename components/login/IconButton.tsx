@@ -13,7 +13,7 @@ type IconButtonProps = {
 export default function IconButton({ iconName, ...rest }: IconButtonProps) {
   return (
     <TouchableOpacity style={styles.touchable} {...rest}>
-      <MaterialCommunityIcons name={iconName} size={24} color="grey" />
+      <MaterialCommunityIcons name={iconName} size={35} color="grey" />
     </TouchableOpacity>
   );
 }
@@ -21,7 +21,5 @@ export default function IconButton({ iconName, ...rest }: IconButtonProps) {
 const styles = StyleSheet.create({
   touchable: {
     aspectRatio: 1,
-    justifyContent: "center",
-    alignItems: "center",
   },
 });

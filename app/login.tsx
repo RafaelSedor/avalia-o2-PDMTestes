@@ -2,7 +2,7 @@ import { StyleSheet, View, Text, TextInput, Dimensions, Button } from "react-nat
 import React, { useState } from "react";
 import IconButton from "../components/login/IconButton";
 import Card from "../components/login/BigCard";
-import { Redirect, Stack, useRouter } from "expo-router";
+import { useRouter } from "expo-router";
 
 export default function Login() {
   const router = useRouter();
@@ -12,7 +12,7 @@ export default function Login() {
 
   const handleSearch = () => {
     if (username != "teste" && password != "123") {
-        router.push("/main")
+        {alert('Login/Senha incorretos!')}
     } else {
       router.push("/main")
     }
@@ -54,14 +54,15 @@ const styles = StyleSheet.create({
     width: Dimensions.get("window").width,
     height: Dimensions.get("window").height,
     alignItems: "center",
-    paddingTop: "50%",
+    paddingTop: "20%",
   },
 
   text: {
-    paddingTop: 100,
+    paddingTop: 85,
   },
 
   buttom: {
     paddingTop: 20,
+    paddingLeft: 50,
   },
 });
