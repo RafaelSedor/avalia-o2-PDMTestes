@@ -19,9 +19,9 @@ export default function Card({ text, link }: CardProps) {
 const styles = StyleSheet.create({
 
   container:{
-        backgroundColor: "#d3d3d3",
-        height: 130,
-        width: 150,
+        backgroundColor: "#ffff",
+        height: 200,
+        width: 250,
         borderRadius: 10,
         alignItems: "center",
         justifyContent: "center",
@@ -29,12 +29,15 @@ const styles = StyleSheet.create({
   },
   
   image:{
-    width: 220,
-    height: 110,
+    width: 240,
+    height: 120,
   },
 
   textColor:{
-    color: "#000000",
+    fontSize: 40,
+    fontWeight: "800",
+    color: "#65b307",
+    padding: 10,
     paddingBottom: 20,
   },
 

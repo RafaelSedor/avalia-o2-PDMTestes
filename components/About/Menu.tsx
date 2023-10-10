@@ -1,16 +1,22 @@
 import { StyleSheet, TouchableOpacity } from "react-native";
 import React from "react";
 import { useActionSheet } from "@expo/react-native-action-sheet";
-import IconButton from "./IconButton";
-import { Redirect, useRouter } from "expo-router";
+import IconButton from "../main/IconButton";
+import { useRouter } from "expo-router";
+
 
 export default function MenuComponent() {
   const { showActionSheetWithOptions } = useActionSheet();
   const router = useRouter();
 
+  const logout = () => {
+    // router.replace("/login");
+    router.back()
+    router.back()
+  };
 
-  const options = ["About", "Logout", "Cancel"];
-  const destructiveButtonIndex = 1;
+  const options = ["Logout", "Cancel"];
+  const destructiveButtonIndex = 0;
   const cancelButtonIndex = 2;
 
   const handlePress = () => {
@@ -22,20 +28,12 @@ export default function MenuComponent() {
       },
       (pressedId) => {
         switch (pressedId) {
-          
-          case 0:
-            router.push("/about")
-            console.log("About");
-            break;
-
+    
           case destructiveButtonIndex:
-             router.replace("..")
-            console.log("Logout");
+            logout();
             break;
 
           case cancelButtonIndex:
-            console.log("Canceled");
-            // Canceled
             break;
         }
       }

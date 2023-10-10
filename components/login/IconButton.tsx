@@ -13,7 +13,7 @@ type IconButtonProps = {
 export default function IconButton({ iconName, ...rest }: IconButtonProps) {
   return (
     <TouchableOpacity style={styles.touchable} {...rest}>
-      <MaterialCommunityIcons name={iconName} size={35} color="grey" />
+      <MaterialCommunityIcons name={iconName} size={45} color="black" />
     </TouchableOpacity>
   );
 }
