@@ -10,9 +10,16 @@ export default function MenuComponent() {
   const router = useRouter();
 
   const logout = () => {
-    // router.replace("/login");
+    // router.replace("/");
+
+
     router.back()
     router.back()
+
+
+  //   while (router.canGoBack()) {
+  //     router.back()
+  // }
   };
 
   const options = ["Logout", "Cancel"];
