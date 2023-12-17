@@ -1,5 +1,5 @@
 {
-  "name": "avaliacao1",
+  "name": "avaliacao2",
   "version": "1.0.0",
   "main": "expo-router/entry",
   "scripts": {
@@ -20,7 +20,8 @@
     "react-native-actionsheet": "^2.4.2",
     "react-native-gesture-handler": "~2.12.0",
     "react-native-safe-area-context": "4.6.3",
-    "react-native-screens": "~3.22.0"
+    "react-native-screens": "~3.22.0",
+    "yarn": "^1.22.21"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
