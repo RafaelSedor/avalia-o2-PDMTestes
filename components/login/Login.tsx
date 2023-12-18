@@ -28,6 +28,7 @@ export default function Login() {
         value={username}
         onChangeText={setUsername}
         placeholder="Digite seu nome de usuário"
+        testID="input-email"
       />
       <Text style={styles.text}>Senha</Text>
       <TextInput
@@ -35,11 +36,13 @@ export default function Login() {
         secureTextEntry
         onChangeText={setPassword}
         placeholder="Digite sua senha"
+        testID="input-senha"
       />
       <IconButton
         style={styles.buttom}
         iconName="location-enter"
         onPress={handleSearch}
+        testID="button-IconButton"
       />
     </View>
   );
@@ -61,9 +64,9 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: "600",
     color: "#ffff",
-    textShadowColor: "black", // Cor da borda
-    textShadowOffset: { width: 1, height: 1 }, // Tamanho da sombra
-    textShadowRadius: 2, // Raio da sombra
+    textShadowColor: "black",
+    textShadowOffset: { width: 1, height: 1 }, 
+    textShadowRadius: 2, 
   },
 
   buttom: {

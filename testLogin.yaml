@@ -1,0 +1,13 @@
+appId: com.avaliacao2.app
+---
+- openLink: exp://192.168.0.11:8081
+- tapOn:
+    id: "input-email"
+- inputText: ${EMAIL}
+- tapOn:
+    id: "input-senha"
+- inputText: ${SENHA}
+- tapOn:
+    id: "button-IconButton"
+- assertVisible: "Carros a Venda"
+

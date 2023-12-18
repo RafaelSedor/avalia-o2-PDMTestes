@@ -46,6 +46,7 @@ export default function MenuComponent() {
     <IconButton
       iconName="bars"
       onPress={handlePress}
+      testID="button-IconButton"
     />
   );
 }
