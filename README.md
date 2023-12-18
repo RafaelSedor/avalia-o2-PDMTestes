@@ -12,12 +12,15 @@ Rapidez de Execução: São ágeis, pois focam em unidades pequenas de código.
 
 Detalhamento da Cobertura: Proporcionam uma cobertura mais detalhada do código.
 
-Para utilizar os testes unitários você deve instalar as bibliotecas:
-npm install jest
-npm install jest-expo
+## Para utilizar os testes unitários você deve instalar as bibliotecas:
 
-e ajustar o package.json com as seguintes informações:
+```bash
+  npm install jest
+  npm install jest-expo
+```
+## Ajuste o package.json com as seguintes informações:
 
+```javascript
 "scripts": {
     "start": "expo start",
     "android": "expo start --android",
@@ -31,11 +34,14 @@ e ajustar o package.json com as seguintes informações:
       "node_modules/(?!((jest-)?react-native|@react-native(-community)?)|expo(nent)?|@expo(nent)?/.*|@expo-google-fonts/.*|react-navigation|@react-navigation/.*|@unimodules/.*|unimodules|sentry-expo|native-base|react-native-svg)"
     ]
   },
+```
 
-com o ambiente configurado basta executar o comando:
+## Com o ambiente configurado basta executar o comando:
+```bash
 npm test
 
-este teste independe do ambiente ao qual será executado.
+este teste é independete do ambiente ao qual será executado.
+```
 
 # Testes End to End (E2E)
 Os testes E2E simulam o fluxo completo de uma aplicação, desde a interação do usuário até a resposta do sistema. Em aplicações mobile, testam o aplicativo como um todo, garantindo que todas as partes se integrem corretamente. Principais características dos testes E2E:
@@ -46,11 +52,15 @@ Integrações Externas: Verificam a interação com serviços externos, como API
 
 Cobertura Menos Detalhada: Oferecem uma cobertura menos detalhada do código, mas validam a integração do sistema como um todo.
 
-Para utilizar os testes unitários você deve instalar o maestro:
+## Para utilizar os testes unitários você deve instalar o maestro:
  A instalação depende do seu sitema operacional e se encontra no link https://maestro.mobile.dev/getting-started/installing-maestro
 
-com o ambiente configurado e o emulador basta executar os seguintes comandos:
+## Com o ambiente configurado e o emulador basta executar os seguintes comandos:
+```bash
 maestro test -e EMAIL="teste" -e SENHA="123"  testLogout.yaml
+
 maestro test -e EMAIL="teste" -e SENHA="123"  testLogin.yaml
 
 este teste solicita o ambiente do emulador.
+```
+
